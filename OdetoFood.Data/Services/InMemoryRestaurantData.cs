@@ -1,6 +1,7 @@
 ﻿using OdetoFood.Data.Models;
 using System;
 using System.Collections.Generic;
+using System.Linq;
 
 namespace OdetoFood.Data.Services
 {
@@ -21,7 +22,7 @@ namespace OdetoFood.Data.Services
 
         public IEnumerable<Restaurant> GetAll()
         {
-            return restaurants;
+            return restaurants.OrderBy(r => r.Name);
         }
     }
 }
